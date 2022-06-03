@@ -1,6 +1,5 @@
-.quest {
-    padding-left: 40px;
-}
-.quest img{
-    width: 300px;
+.test {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }

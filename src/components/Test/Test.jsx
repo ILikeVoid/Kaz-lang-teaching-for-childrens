@@ -1,7 +1,10 @@
-import React, {useEffect, useState} from "react";
 import s from "./Test.module.css";
-import axios from "axios";
 import Start from "./Start/Start";
+import Result from "./Result/Result";
+import Tests from "./Tests/Tests";
+import {Route, Routes} from "react-router-dom";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 const Test = () => {
@@ -13,55 +16,30 @@ const Test = () => {
             .then((Response) => setItems(Response.data));
     }, []);
 
+    let questionsArray = items.map((elem) =>
+        <Tests
+            questionsId={elem.id}
+            questions={elem.question}
+            imageUrl={elem.imageUrl}
+            firstAnswer={elem.firstAnswer}
+            secondAnswer={elem.secondAnswer}
+            thirdAnswer={elem.thirdAnswer}
+            value1={elem.value1}
+            value2={elem.value2}
+            value3={elem.value3}
+            path={elem.path}
+            link={elem.link}
+            button={elem.button}
+        />
+    )
+
     return (
         <div className={s.test}>
-            <Start/>
-            {items.map((item) => (
-                <div className={s.quest}>
-                    <h2 className={s.guast_answer}>{item.question}</h2>
-                    <img src={item.imageUrl}/>
-                    <div className={s.quest_inputs}>
-                        <input
-                            className={s.input}
-                            type="radio"
-                            id="q1"
-                            name="q1"
-                            value="yes"
-                        />
-                        <label htmlFor="q1">{item.firstAnswer}</label>
-                    </div>
-                    <div className={s.quest_inputs}>
-                        <input
-                            className={s.input}
-                            type="radio"
-                            id="q2"
-                            name="q1"
-                            value="no"
-                        />
-                        <label htmlFor="q2">{item.secondAnswer}</label>
-                    </div>
-                    <div className={s.quest_inputs}>
-                        <input
-                            className={s.input}
-                            type="radio"
-                            id="q3"
-                            name="q1"
-                            value="no"
-                        />
-                        <label htmlFor="q3">{item.thirdAnswer}</label>
-                    </div>
-                    <input className={s.quest_button} type="button" value="Next"/>
-                </div>
-            ))}
-            <div className={s.result_wrapper}>
-                <h2 className={s.result_title}>Right answer</h2>
-                <div className={s.result_count}>8</div>
-                <input
-                    className={s.result_button}
-                    type="button"
-                    value="Restart"
-                />
-            </div>
+            <Routes>
+                <Route exact path='/' element={<Start />}/>
+                <Route path={items.path} elemet={questionsArray}/>
+                <Route path="/result" element={<Result/>}/>
+            </Routes>
         </div>
     );
 };

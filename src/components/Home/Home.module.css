@@ -1,0 +1,17 @@
+.home {
+    padding-left: 20px;
+}
+.home img {
+    width: 800px;
+    border-radius: 30px;
+}
+
+.home button {
+    border-radius: 30px;
+    background-color: yellow;
+    font-size: 60px;
+    color: wheat;
+    border-color: silver;  
+    border-width: 10px; 
+    border-style: double;
+}

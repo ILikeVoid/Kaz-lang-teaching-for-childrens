@@ -1,0 +1,16 @@
+.tasks {
+    display: grid;
+    width: auto;
+    grid-template-areas:
+    "b b"
+    "t t";
+
+    grid-template-rows: 80px 1fr;
+    grid-auto-columns: 2fr 10fr;
+
+}
+
+.tasks_content {
+    grid-area: t;
+    background-image:url("https://abrakadabra.fun/uploads/posts/2022-01/1642707567_2-abrakadabra-fun-p-svetlii-detskii-fon-2.jpg");
+}

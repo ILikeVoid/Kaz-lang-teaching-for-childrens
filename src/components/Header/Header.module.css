@@ -1,0 +1,25 @@
+.header {
+    grid-area: h;
+    background-color: cadetblue;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.item {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    color: gold;
+    text-decoration: none;
+}
+
+.icon img {
+    width: 90px;
+    background: none;
+}
+
+.home {
+    width: 10px;
+}
