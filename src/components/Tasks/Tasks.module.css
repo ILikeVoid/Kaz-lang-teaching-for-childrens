@@ -1,16 +1,58 @@
-.tasks {
-    display: grid;
-    width: auto;
-    grid-template-areas:
-    "b b"
-    "t t";
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Manrope:wght@200&display=swap');
 
-    grid-template-rows: 80px 1fr;
-    grid-auto-columns: 2fr 10fr;
-
+.grammer {
+    display: flex;
+    padding: 20px;
 }
 
-.tasks_content {
-    grid-area: t;
-    background-image:url("https://abrakadabra.fun/uploads/posts/2022-01/1642707567_2-abrakadabra-fun-p-svetlii-detskii-fon-2.jpg");
+.grammer_img {
+    display: block;
+}
+
+.grammer_text {
+    display: block;
+    padding: 20px;
+    font-family: 'Blaka', cursive;
+    color:cadetblue;
+
+}
+.grammer img {
+    width: 400px;
+    box-shadow: 1px 1px 5px 5px #7c7c7c;
+}
+
+.tasks button{
+    width: 250px;
+    height: 50px;
+    background-color: #5bc63d;
+    border: 1px dashed #fff;
+    box-shadow: 0 0 0 0.24rem #5bc63d, 0 0.19rem 0 0.24rem #3f8d29;
+    color: #fff;
+    margin: 0.24rem;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.tests{
+    display: flex;
+    padding: 20px;
+    margin-left: 20%;
+}
+
+.tests_img {
+    display: block;
+}
+
+.tests_text {
+    padding-top: 100px;
+    padding-right: 40px;
+    display: block;
+    text-align: right;
+    font-family: 'Blaka', cursive;
+    color:cadetblue;
+
+}
+.tests img{
+    width: 400px;
+    height: 300px;
+    box-shadow: 1px 1px 5px 5px #7c7c7c;
 }

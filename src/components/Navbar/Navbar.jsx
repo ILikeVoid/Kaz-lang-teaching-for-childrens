@@ -14,13 +14,13 @@ const Navbar = () => {
           to="alphabet"
           className={(navData) => (navData.isActive ? s.active : s.item)}>Алфавит</NavLink>
       </div>
-      <div>
+      <div className={s.tasks_link}>
         <img src={tasks_img} />
         <NavLink
           to="tasks"
           className={(navData) => (navData.isActive ? s.active : s.item)}>Тапсырмалар</NavLink>
       </div>
-      <div>
+      <div className={s.tales_link}>
         <img src={tales_img}/>
         <NavLink
           to="tales"

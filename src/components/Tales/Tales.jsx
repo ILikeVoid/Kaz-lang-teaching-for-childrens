@@ -1,37 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import s from "./Tales.module.css";
 
 const Tales = () => {
-  const [value, setValue] = useState("initial");
-  const renderCount = useRef(1);
-  const inputRef = useRef(null);
-  const prevValue = useRef("");
+    return(
+        <div>
+            <iframe width="300" height="315" src="https://www.youtube.com/embed/r0boG4KzU6g"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sP7wOjysdhM"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen></iframe>
+        </div>
+    )
 
-  useEffect(() => {
-    renderCount.current++;
-  });
-
-  useEffect(() => {
-    prevValue.current = value;
-  }, [value]);
-
-  function Focus() {
-    return inputRef.current.focus();
-  }
-
-  return (
-    <div className={s.tales}>
-      <h1>Количество рендеров: {renderCount.current}</h1>
-      <h1>Прошлое Значение: {prevValue.current}</h1>
-      <input
-        ref={inputRef}
-        type="text"
-        onChange={(e) => setValue(e.target.value)}
-        value={value}
-      />
-      <button onClick={Focus}>Фокус</button>
-    </div>
-  );
-};
+}
 
 export default Tales;
