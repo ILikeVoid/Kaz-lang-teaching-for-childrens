@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Manrope:wght@200&display=swap');
 .start_wrapper{
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-}
-.test_title {
-    display: block;
-    font-size: 50px;
+    font-family: 'Blaka', cursive;
+    color: darkgoldenrod;
 }
 
-.start_button{
-    display: flex;
+.start_wrapper input{
+    width: 100px;
+    height: 50px;
+    background-color: #5bc63d;
+    border: 1px dashed #fff;
+    box-shadow: 0 0 0 0.24rem #5bc63d, 0 0.19rem 0 0.24rem #3f8d29;
+    color: #fff;
+    margin: 0.24rem;
+    font-size: 20px;
+    border-radius: 5px;
 }

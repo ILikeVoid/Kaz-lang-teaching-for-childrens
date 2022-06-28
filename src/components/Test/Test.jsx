@@ -70,6 +70,7 @@ const Test = () => {
                                           button={elem.button}
                                           getReset={getReset}
                                           getAnswer={getAnswer}
+                                          id={elem.id}
                                       />}
                         />
                     }

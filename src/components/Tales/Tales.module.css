@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Manrope:wght@200&display=swap');
+.tales {
+    border-width: 5px;
+    border-bottom: #7c7c7c;
+    padding: 30px;
+}
+
+.tales iframe{
+    margin: 10px;
+    width: 400px;
+    height: 230px;
+    border-bottom: #7c7c7c;
+    border-width: 5px;
+}
+
+.description {
+    float: right;
+    width: 300px;
+    text-align: left;
+    font-family: 'Blaka', cursive;
+    color: #a19480;
+}

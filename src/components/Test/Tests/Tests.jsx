@@ -5,7 +5,8 @@ const Tests = (props) => {
 
     return (
             <div className={s.tests}>
-                <h2 className={s.guast_answer}>{props.question}</h2>
+                <h2 className={s.tests_id}>Тапсырма: {props.id}/20</h2>
+                <h2 className={s.guast_answer}>{props.questions}</h2>
                 <img src={props.imageUrl}/>
                 <div className={s.quest_inputs}>
                     <input
@@ -25,9 +26,11 @@ const Tests = (props) => {
                         className={s.input} type="radio" id="q3" name="q1" value={props.value3}/>
                     <label htmlFor="q3">{props.thirdAnswer}</label>
                 </div>
-                <NavLink to={props.link}><input
-                    onClick={props.getReset}
-                    className={s.quest_button} type="button" value={props.button}/></NavLink>
+                <div className={s.quest_button}>
+                    <NavLink to={props.link}><input
+                        onClick={props.getReset} type="button" value={props.button}/></NavLink>
+                </div>
+
             </div>
     );
 };

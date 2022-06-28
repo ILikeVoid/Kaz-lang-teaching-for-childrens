@@ -12,6 +12,9 @@
     bottom: 150px;
     margin-left: 70px;
 }
+.icon img:hover {
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.4);
+}
 
 .home {
     width: 10px;
